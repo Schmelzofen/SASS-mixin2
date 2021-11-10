@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin ball--size($w, $h, $br){
+    width: $w;
+    height: $h;
+    border-radius: $br;
+}
+
+@mixin color($c){
+    background: $c;
+}
+
+@mixin animation($anim, $step1, $step2){
+    @keyframes move{
+        0%{
+            transform: translateX(0vw);
+        }
+        50%{
+            transform: translateX(93vw);
+        }
+        100%{
+            transform: translateX(0vw);
+        }
+    }
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    background:saddlebrown;
+}
+
+.container{
+    .ball1{
+        position: absolute;
+        animation: move 1s infinite;
+        @include ball--size(100px, 100px, 50%);
+        @include color (red);
+        @include animation(0%, 50%, 100%);
+    }
+    .ball2{
+        position: absolute;
+        top: 120px;
+        animation: move 1.5s infinite;
+        @include color (blue);
+        @include ball--size(100px, 100px, 50%);
+        @include animation(0%, 50%, 100%);
+    }
+    .ball3{
+        position: absolute;
+        top: 240px;
+        animation: move 2s infinite;
+        @include color (green);
+        @include ball--size(100px, 100px, 50%);
+        @include animation(0%, 50%, 100%);
+    }
+}

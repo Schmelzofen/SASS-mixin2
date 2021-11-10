@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background: saddlebrown;
+}
+
+.container .ball1 {
+  position: absolute;
+  animation: move 1s infinite;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: red;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0vw);
+  }
+  50% {
+    transform: translateX(93vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+.container .ball2 {
+  position: absolute;
+  top: 120px;
+  animation: move 1.5s infinite;
+  background: blue;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0vw);
+  }
+  50% {
+    transform: translateX(93vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+.container .ball3 {
+  position: absolute;
+  top: 240px;
+  animation: move 2s infinite;
+  background: green;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0vw);
+  }
+  50% {
+    transform: translateX(93vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
